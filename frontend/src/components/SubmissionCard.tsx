@@ -1,7 +1,7 @@
 
 import {  TableRow, TableCell, TableBody } from "@/components/ui/table"
 
-export default function TableComponent({language, username, stdin, sourcecode, outputcode}) {
+export default function TableComponent({language: string, username, stdin, sourcecode, outputcode}) {
   return (
       <TableBody>
         <TableRow>

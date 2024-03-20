@@ -12,6 +12,16 @@ import TableComponent from "./SubmissionCard"
 
 
 
+interface Submission {
+  id: string;
+  user: {
+    username: string;
+  };
+  codeLanguage: string;
+  stdin: string;
+  sourceCode: string;
+  outputCode: string;
+}
 
 
 export default function DashboardComponent() {
@@ -19,7 +29,8 @@ export default function DashboardComponent() {
 
   const navigate = useNavigate()
 
-    const [allSubmission, setAllSubmission] = useState([])
+
+    const [allSubmission, setAllSubmission] = useState<Submission[]>([])
 
     useEffect(() => {
         const fetchData = async () => {
