@@ -34,6 +34,8 @@ export default function DashboardComponent() {
 
 
 
+
+
     
 
 
@@ -60,16 +62,13 @@ export default function DashboardComponent() {
 
 
       {allSubmission.map((submission) => (
-
         <TableComponent
-
-
-       key={submission.id}
-       username={submission.user.username}
-                language= {submission.codeLanguage}
-               stdin= {submission.stdin}
-                sourcecode={submission.sourceCode.length > 100 ? submission.sourceCode.substring(0, 100) + '...' : submission.sourceCode}
-                outputcode = {submission.outputCode}
+       key={submission.['id']}
+       username={submission.['user'].username}
+                language= {submission.['codeLanguage']}
+               stdin= {submission.['stdin']}
+                sourcecode={submission.['sourceCode'].length > 100 ? submission.['sourceCode'].substring(0, 100) + '...' : submission.sourceCode}
+                outputcode = {submission.['outputCode']}
         />
         
               
